@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+:root {
+	--primary-color: #e26e70;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: "Shippori Antique B1", sans-serif;
+}
+body {
+	height: 100vh;
+	background-image: linear-gradient(
+		45deg,
+		rgb(65, 88, 208) 0%,
+		rgb(200, 80, 192) 50%,
+		rgb(255, 204, 112) 100%
+	);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-btn-open {
+	padding: 20px 40px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	position: relative;
+	font-size: 20px;
+	background-color: #efefef;
+}
+.modal-btn-open:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+}
+.modal-container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.open {
+	display: flex;
+}
+.modal-inner {
+	width: 420px;
+	border-radius: 5px;
+	background: #fff;
+	overflow: hidden;
+	animation: modalChuyendong ease 0.5s;
+}
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	background: var(--primary-color);
+	padding: 15px;
+
+	color: #fff;
+}
+.modal-header i:hover {
+	cursor: pointer;
+}
+.modal-header i {
+	margin-top: 4px;
+}
+.modal-body {
+	padding: 15px;
+}
+.modal-body h2 {
+	color: var(--primary-color);
+	margin-bottom: 10px;
+}
+.modal-footer {
+	padding: 15px;
+	display: flex;
+	justify-content: flex-end;
+}
+.modal-btn-close {
+	padding: 10px 20px;
+	background: var(--primary-color);
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+}
+.modal-btn-close:hover {
+	cursor: pointer;
+}
+
+@keyframes modalChuyendong {
+	from {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
