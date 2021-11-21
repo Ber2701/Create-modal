@@ -58,12 +58,22 @@ body {
 	overflow: hidden;
 	animation: modalChuyendong ease 0.5s;
 }
+@keyframes modalChuyendong {
+	from {
+		top: -200px;
+		transform: translateY(-100px);
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+}
+
 .modal-header {
 	display: flex;
 	justify-content: space-between;
 	background: var(--primary-color);
 	padding: 15px;
-
 	color: #fff;
 }
 .modal-header i:hover {
@@ -94,15 +104,4 @@ body {
 }
 .modal-btn-close:hover {
 	cursor: pointer;
-}
-
-@keyframes modalChuyendong {
-	from {
-		opacity: 0;
-		transform: translateY(-100px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0px);
-	}
 }
